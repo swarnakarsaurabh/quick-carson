@@ -5,7 +5,7 @@
 import axios from 'axios';
 
 // Backend ka base URL - ek jagah define karo taki baad mein change karna easy ho
-const BASE_URL = 'http://localhost:8000';
+const BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
 
 // Axios instance banao with default config
 const api = axios.create({

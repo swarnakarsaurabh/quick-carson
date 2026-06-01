@@ -1,0 +1,43 @@
+# ─── Python / Backend ───
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Database file - apna local data GitHub pe mat bhejo
+taskflow.db
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment variables - SECRET keys kabhi commit mat karo!
+.env
+.env.local
+.env.*.local
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# ─── Node / Frontend ───
+node_modules/       # ye folder bahut bada hota hai, skip karo
+frontend/build/     # production build
+frontend/.env.local
+
+# ─── OS Files ───
+.DS_Store           # Mac
+Thumbs.db           # Windows
+desktop.ini
+
+# ─── IDE ───
+.vscode/
+.idea/
+*.suo
+*.user

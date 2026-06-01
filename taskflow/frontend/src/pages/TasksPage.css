@@ -1,0 +1,80 @@
+/* src/pages/TasksPage.css */
+
+/* Filter Bar */
+.filter-bar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.filter-select { width: auto; min-width: 140px; }
+
+/* Task Table */
+.task-table-wrapper { overflow-x: auto; }
+
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.task-table th {
+  text-align: left;
+  padding: 14px 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-tertiary);
+}
+.task-table th:first-child { border-radius: var(--radius) 0 0 0; }
+.task-table th:last-child  { border-radius: 0 var(--radius) 0 0; }
+
+.task-table-row td {
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+.task-table-row:last-child td { border-bottom: none; }
+.task-table-row:hover td { background: rgba(255,255,255,0.02); }
+
+.task-title { font-weight: 500; margin-bottom: 2px; }
+.task-desc-preview {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+/* Status toggle button - invisible button around badge */
+.status-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 20px;
+  transition: var(--transition);
+}
+.status-toggle:hover { transform: scale(1.05); opacity: 0.85; }
+
+.assignee, .due-date { font-size: 13px; }
+
+.action-btns { display: flex; gap: 4px; }
+
+/* Icon buttons (reused from projects) */
+.icon-btn {
+  background: none; border: none;
+  padding: 6px 8px; border-radius: 6px;
+  cursor: pointer; font-size: 15px;
+  transition: var(--transition);
+}
+.icon-btn:hover       { background: rgba(255,255,255,0.08); }
+.icon-btn.danger:hover{ background: rgba(239,68,68,0.15); }
+
+/* Form grid inside modal */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 16px;
+}
